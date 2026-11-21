@@ -1,10 +1,19 @@
 {
   "schemaVersion": 1,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "together-ai.api",
   "providerType": "api",
   "id": "api_together_ai",
   "title": "Together AI",
   "protocol": "openai",
-  "baseUrl": "https://api.together.xyz/v1"
+  "baseUrl": "https://api.together.ai/v1",
+  "imageGeneration": {
+    "operation": "together-images",
+    "models": [
+      "black-forest-labs/FLUX.1.1-pro"
+    ],
+    "sizes": [
+      "1024x1024"
+    ]
+  }
 }
