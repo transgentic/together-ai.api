@@ -44,7 +44,7 @@ def reserve_tag(sha, requested):
 def main():
     name = os.environ["GITHUB_REPOSITORY"].split("/")[1]
     filename = name + ".recipe.json"
-    data = json.loads(Path(filename).read_text())
+    data = json.loads(Path("recipe.json").read_text())
     slug, kind = name.split(".")
     provider_id = slug if kind == "webview" else kind + "_" + slug.replace("-", "_")
     if (data["repository"], data["providerType"], data["schemaVersion"], data["id"]) != (name, kind, 1, provider_id):
